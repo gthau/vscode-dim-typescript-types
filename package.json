@@ -1,0 +1,15 @@
+{
+  "name": "vscode-dim-typescript-types",
+  "version": "0.0.1",
+  "main": "index.js",
+  "repository": "git@github.com:gthau/vscode-dim-typescript-types.git",
+  "author": "Ghislain Thau",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "tslib": "^2.6.2"
+  }
+}

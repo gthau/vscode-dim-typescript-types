@@ -1,0 +1,270 @@
+{
+    "editor.semanticHighlighting.enabled": false,
+    "editor.bracketPairColorization.enabled": false,
+    "editor.tokenColorCustomizations": {
+        // "[Blueberry dark theme]": {
+        "[*]": {
+            "textMateRules": [
+              {
+                "name": "param-and-return-types",
+                "scope": [
+                    "support.type.primitive.ts",
+                    "entity.name.type.ts",
+                    "meta.type.tuple.ts",
+                    "meta.type.annotation.ts",
+                    "meta.type.parameters.ts",
+                    "keyword.operator.type.ts",
+                    "meta.return.type.arrow.ts",
+                    "keyword.operator.type.annotation.ts",
+                    "meta.return.type.ts",
+                    "punctuation.definition.typeparameters.begin.ts",
+                    "punctuation.definition.typeparameters.end.ts",
+                    // spread operator
+                    "meta.function.ts meta.parameters.ts meta.type.annotation.ts meta.type.tuple.ts keyword.operator.rest.ts",
+                    // typeguard return type
+                    "meta.function.ts meta.return.type.ts variable.parameter.ts",
+                    "keyword.operator.expression.is.ts",
+                    "meta.var.expr.ts meta.arrow.ts meta.arrow.ts meta.return.type.arrow.ts variable.parameter.ts",
+                    // arrow function as param or return type
+                    // "meta.parameters.ts meta.type.annotation.ts meta.type.function.ts meta.parameters.ts punctuation.definition.parameters.begin.ts",
+                    // "meta.parameters.ts meta.type.annotation.ts meta.type.function.ts meta.parameters.ts punctuation.definition.parameters.end.ts",
+                    "meta.type.function.ts meta.parameters.ts punctuation.definition.parameters.begin.ts",
+                    "meta.type.function.ts meta.parameters.ts punctuation.definition.parameters.end.ts",
+                    "meta.parameters.ts meta.type.annotation.ts meta.type.function.ts meta.parameters.ts variable.parameter.ts",
+                    "meta.parameters.ts meta.type.annotation.ts meta.type.function.return.ts storage.type.function.arrow.ts",
+                    "meta.return.type.ts meta.type.function.return.ts storage.type.function.arrow.ts",
+                    "meta.function.ts meta.parameters.ts meta.type.annotation.ts meta.type.function.return.ts keyword.operator.expression.typeof.ts",
+                    "meta.function.ts meta.parameters.ts meta.type.annotation.ts meta.type.function.return.ts variable.other.readwrite.ts",
+                    // arrow function in interface
+                    "meta.interface.ts meta.field.declaration.ts meta.type.annotation.ts meta.type.function.ts meta.parameters.ts variable.parameter.ts",
+                    "meta.interface.ts meta.field.declaration.ts meta.type.annotation.ts meta.type.function.return.ts storage.type.function.arrow.ts",
+                    // module name in type
+                    "meta.type.parameters.ts entity.name.type.module.ts",
+                    "meta.type.parameters.ts punctuation.accessor.ts",
+                    "meta.type.annotation.ts entity.name.type.module.ts",
+                    "meta.type.annotation.ts punctuation.accessor.ts",
+                    // object in params
+                    "meta.function.ts meta.parameters.ts meta.type.annotation.ts meta.object.type.ts punctuation.definition.block.ts",
+                    "meta.function.ts meta.parameters.ts meta.type.annotation.ts meta.object.type.ts meta.field.declaration.ts meta.definition.property.ts variable.object.property.ts",
+                    // comma in generics
+                    "meta.type.parameters.ts punctuation.separator.comma.ts",
+                    // type in parametrized type
+                    "meta.class.ts meta.method.declaration.ts meta.type.parameters.ts variable.other.readwrite.ts",
+                    // function parameter generic type union of string
+                    "meta.function.ts meta.parameters.ts meta.type.annotation.ts meta.type.parameters.ts string.quoted.single.ts punctuation.definition.string.begin.ts",
+                    "meta.function.ts meta.parameters.ts meta.type.annotation.ts meta.type.parameters.ts string.quoted.single.ts punctuation.definition.string.end.ts",
+                    "meta.function.ts meta.parameters.ts meta.type.annotation.ts meta.type.parameters.ts string.quoted.single.ts",
+                ],
+                "settings": {
+                    "foreground": "#506477",
+                }
+            },
+            {
+                "name": "extends-typeof-keyof",
+                "scope": [
+                    // extends
+                    "meta.var.expr.ts meta.type.parameters.ts storage.modifier.ts",
+                    "meta.type.declaration.ts meta.type.parameters.ts storage.modifier.ts",
+                    "meta.function.ts meta.type.parameters.ts storage.modifier.ts",
+                    "meta.class.ts meta.method.declaration.ts meta.type.parameters.ts storage.modifier.ts",
+                    "meta.class.ts meta.type.parameters.ts storage.modifier.ts",
+                    // typeof
+                    "meta.var.expr.ts meta.arrow.ts meta.return.type.arrow.ts meta.type.parameters.ts meta.type.paren.cover.ts keyword.operator.expression.typeof.ts",
+                    "meta.class.ts meta.method.declaration.ts meta.type.parameters.ts keyword.operator.expression.typeof.ts",
+                    // keyof
+                    "meta.var.expr.ts meta.arrow.ts meta.return.type.arrow.ts meta.type.parameters.ts meta.type.tuple.ts keyword.operator.expression.keyof.ts",
+                    "meta.class.ts meta.method.declaration.ts meta.type.parameters.ts keyword.operator.expression.keyof.ts",
+                    // string in mapped type
+                    "meta.var.expr.ts meta.var-single-variable.expr.ts meta.type.annotation.ts meta.type.parameters.ts meta.type.tuple.ts string.quoted.double.ts",
+                    "meta.class.ts meta.field.declaration.ts meta.type.annotation.ts support.type.builtin.ts",
+                    "meta.class.ts meta.field.declaration.ts meta.type.annotation.ts meta.type.tuple.ts string.quoted.single.ts punctuation.definition.string.begin.ts",
+                    "meta.class.ts meta.field.declaration.ts meta.type.annotation.ts meta.type.tuple.ts string.quoted.single.ts punctuation.definition.string.end.ts",
+                    "meta.class.ts meta.field.declaration.ts meta.type.annotation.ts meta.type.tuple.ts string.quoted.single.ts",
+                    // as
+                    "keyword.control.as.ts",
+                    // optional ?
+                    "meta.function.ts meta.parameters.ts meta.type.annotation.ts meta.object.type.ts meta.field.declaration.ts keyword.operator.optional.ts",
+                    // ; in types
+                    "meta.type.annotation.ts meta.object.type.ts punctuation.terminator.statement.ts",
+                    // string in return type unions
+                    "meta.function.ts meta.return.type.ts string.quoted.single.ts punctuation.definition.string.begin.ts",
+                    "meta.function.ts meta.return.type.ts string.quoted.single.ts punctuation.definition.string.end.ts",
+                    "meta.function.ts meta.return.type.ts string.quoted.single.ts",
+                    "meta.function.ts meta.return.type.ts string.quoted.double.ts punctuation.definition.string.begin.ts",
+                    "meta.function.ts meta.return.type.ts string.quoted.double.ts punctuation.definition.string.end.ts",
+                    "meta.function.ts meta.return.type.ts string.quoted.double.ts",
+                    "meta.function.ts meta.return.type.ts string.template.ts punctuation.definition.string.template.begin.ts",
+                    "meta.function.ts meta.return.type.ts string.template.ts punctuation.definition.string.template.end.ts",
+                    "meta.function.ts meta.return.type.ts string.template.ts",
+                    // extends object
+                    "meta.function.ts meta.block.ts meta.function.expression.ts meta.type.parameters.ts meta.object.type.ts punctuation.definition.block.ts",
+                    "meta.function.ts meta.block.ts meta.function.expression.ts meta.type.parameters.ts meta.object.type.ts meta.method.declaration.ts meta.parameters.ts punctuation.definition.parameters.begin.ts",
+                    "meta.function.ts meta.block.ts meta.function.expression.ts meta.type.parameters.ts meta.object.type.ts meta.method.declaration.ts meta.parameters.ts punctuation.definition.parameters.end.ts",
+                    "meta.function.ts meta.block.ts meta.function.expression.ts meta.type.parameters.ts meta.object.type.ts meta.method.declaration.ts keyword.operator.new.ts",
+                    "meta.function.ts meta.block.ts meta.function.expression.ts meta.type.parameters.ts meta.object.type.ts meta.method.declaration.ts meta.parameters.ts keyword.operator.rest.ts",
+                    "meta.function.ts meta.block.ts meta.function.expression.ts meta.type.parameters.ts meta.object.type.ts meta.method.declaration.ts meta.parameters.ts variable.parameter.ts",
+
+                ],
+                "settings": {
+                    "foreground": "#506477",
+                    "fontStyle": "italic bold"
+                }
+            },
+            {
+                "name": "null-undefined",
+                "scope": [
+                    // undefined, null in param type
+                    "meta.class.ts meta.method.declaration.ts meta.parameters.ts meta.type.annotation.ts support.type.builtin.ts",
+                    // undefined, null in generic type
+                    "meta.class.ts meta.method.declaration.ts meta.return.type.ts meta.type.parameters.ts support.type.builtin.ts",
+                    // undefined, null in return type
+                    "meta.class.ts meta.method.declaration.ts meta.return.type.ts support.type.builtin.ts",
+                    // undefined, null in function params
+                    "meta.function.ts meta.parameters.ts meta.type.annotation.ts support.type.builtin.ts",
+                    // undefined, null in interface
+                    "meta.interface.ts meta.field.declaration.ts meta.type.annotation.ts support.type.builtin.ts",
+                    // undefined, null in variable type
+                    "meta.type.annotation.ts support.type.builtin.ts",
+                    "support.type.builtin.ts",
+                ],
+                "settings": {
+                    "foreground": "#506477",
+                }
+            },
+            {
+                "name": "variable-after-typeof",
+                "scope": [
+                    // variable name after typeof
+                    "meta.var.expr.ts meta.arrow.ts meta.return.type.arrow.ts meta.type.parameters.ts meta.type.paren.cover.ts variable.other.readwrite.ts",
+                ],
+                "settings": {
+                    "foreground": "#506477",
+                    "fontStyle": "bold"
+                }
+            },
+            {
+                // "name": "class-decorators",
+                // "scope": [
+                //     // class decorator
+                //     "meta.decorator.ts meta.function-call.ts entity.name.function.ts",
+                //     // decorator @
+                //     "meta.decorator.ts punctuation.decorator.ts",
+                //     // decorator ()
+                //     "meta.decorator.ts meta.brace.round.ts",
+                //     // arrow function in class decorator
+                //     // - true/false
+                //     "meta.function.ts meta.block.ts meta.decorator.ts meta.objectliteral.ts meta.object.member.ts constant.language.boolean.true.ts",
+                //     "meta.function.ts meta.block.ts meta.decorator.ts meta.objectliteral.ts meta.object.member.ts constant.language.boolean.false.ts",
+                //     // - () and =>
+                //     "meta.decorator.ts meta.arrow.ts meta.parameters.ts punctuation.definition.parameters.begin.ts",
+                //     "meta.decorator.ts meta.arrow.ts meta.parameters.ts punctuation.definition.parameters.end.ts",
+                //     "meta.decorator.ts meta.arrow.ts storage.type.function.arrow.ts",
+                //     // - return type
+                //     "meta.decorator.ts variable.other.readwrite.ts",
+                //     // - string in object
+                //     "meta.decorator.ts string.quoted.single.ts",
+                //     // comma in object
+                //     "meta.decorator.ts punctuation.separator.comma.ts",
+                //     // object curly braces {}
+                //     "meta.decorator.ts meta.objectliteral.ts punctuation.definition.block.ts",
+                //     // object function property  (e.g. { *myFunc*: () => ... })
+                //     "meta.decorator.ts meta.objectliteral.ts meta.object.member.ts meta.object-literal.key.ts entity.name.function.ts",
+                //     // object ":"
+                //     "meta.decorator.ts meta.objectliteral.ts meta.object.member.ts meta.object-literal.key.ts punctuation.separator.key-value.ts",
+                //     // string in object body (e.g. inside method)
+                //     "meta.decorator.ts string.quoted.single.ts punctuation.definition.string.begin.ts",
+                //     "meta.decorator.ts string.quoted.single.ts punctuation.definition.string.end.ts",
+                //     // object non-function properties
+                //     "meta.decorator.ts meta.objectliteral.ts meta.object.member.ts meta.object-literal.key.ts",
+                //     // number value in object
+                //     "meta.decorator.ts meta.objectliteral.ts meta.object.member.ts constant.numeric.decimal.ts",
+                //     "meta.decorator.ts meta.objectliteral.ts meta.object.member.ts meta.function-call.ts variable.other.object.ts",
+                //     // square brackets
+                //     "meta.decorator.ts meta.objectliteral.ts meta.object.member.ts meta.array.literal.ts meta.brace.square.ts",
+                //     // spread operator
+                //     "meta.decorator.ts meta.objectliteral.ts meta.object.member.ts meta.array.literal.ts keyword.operator.spread.ts",
+                //     // boolean value in object
+                //     "meta.decorator.ts meta.objectliteral.ts meta.object.member.ts meta.array.literal.ts meta.objectliteral.ts meta.object.member.ts constant.language.boolean.true.ts",
+                //     "meta.decorator.ts meta.objectliteral.ts meta.object.member.ts meta.array.literal.ts meta.objectliteral.ts meta.object.member.ts constant.language.boolean.false.ts",
+                //     // variable and property access  (e.g. myVar.someField)
+                //     "meta.decorator.ts meta.objectliteral.ts meta.object.member.ts meta.array.literal.ts meta.objectliteral.ts meta.object.member.ts meta.array.literal.ts meta.objectliteral.ts meta.object.member.ts variable.other.object.ts",
+                //     "meta.decorator.ts meta.objectliteral.ts meta.object.member.ts meta.array.literal.ts meta.objectliteral.ts meta.object.member.ts meta.array.literal.ts meta.objectliteral.ts meta.object.member.ts variable.other.property.ts",
+                //     "meta.decorator.ts meta.objectliteral.ts meta.object.member.ts meta.array.literal.ts meta.objectliteral.ts meta.object.member.ts meta.array.literal.ts meta.objectliteral.ts meta.object.member.ts variable.other.object.property.ts",
+                //     // ===
+                //     "meta.decorator.ts meta.objectliteral.ts meta.object.member.ts meta.array.literal.ts meta.objectliteral.ts meta.object.member.ts meta.array.literal.ts meta.objectliteral.ts meta.object.member.ts keyword.operator.comparison.ts",
+                //     // null undefined
+                //     "meta.decorator.ts meta.objectliteral.ts meta.object.member.ts meta.array.literal.ts meta.objectliteral.ts meta.object.member.ts meta.array.literal.ts constant.language.undefined.ts",
+                //     "meta.decorator.ts meta.objectliteral.ts meta.object.member.ts meta.array.literal.ts meta.objectliteral.ts meta.object.member.ts meta.array.literal.ts constant.language.null.ts",
+                //     // arrow function params in object
+                //     "meta.decorator.ts meta.objectliteral.ts meta.object.member.ts meta.array.literal.ts meta.objectliteral.ts meta.object.member.ts meta.array.literal.ts meta.objectliteral.ts meta.object.member.ts meta.arrow.ts meta.parameters.ts variable.parameter.ts",
+                //     // . and ?. in arrow function body
+                //     "meta.decorator.ts meta.objectliteral.ts meta.object.member.ts meta.array.literal.ts meta.objectliteral.ts meta.object.member.ts meta.array.literal.ts meta.objectliteral.ts meta.object.member.ts punctuation.accessor.optional.ts",
+                //     // regular function expression in object
+                //     "meta.decorator.ts meta.objectliteral.ts meta.object.member.ts meta.array.literal.ts meta.objectliteral.ts meta.object.member.ts meta.array.literal.ts meta.objectliteral.ts meta.object.member.ts meta.function.expression.ts storage.type.function.ts",
+                //     "meta.decorator.ts meta.objectliteral.ts meta.object.member.ts meta.array.literal.ts meta.objectliteral.ts meta.object.member.ts meta.array.literal.ts meta.objectliteral.ts meta.object.member.ts meta.function.expression.ts meta.definition.function.ts entity.name.function.ts",
+                //     "meta.decorator.ts meta.objectliteral.ts meta.object.member.ts meta.array.literal.ts meta.objectliteral.ts meta.object.member.ts meta.array.literal.ts meta.objectliteral.ts meta.object.member.ts meta.function.expression.ts meta.parameters.ts punctuation.definition.parameters.begin.ts",
+                //     "meta.decorator.ts meta.objectliteral.ts meta.object.member.ts meta.array.literal.ts meta.objectliteral.ts meta.object.member.ts meta.array.literal.ts meta.objectliteral.ts meta.object.member.ts meta.function.expression.ts meta.parameters.ts punctuation.definition.parameters.end.ts",
+                //     "meta.decorator.ts meta.objectliteral.ts meta.object.member.ts meta.array.literal.ts meta.objectliteral.ts meta.object.member.ts meta.array.literal.ts meta.objectliteral.ts meta.object.member.ts meta.function.expression.ts meta.parameters.ts variable.parameter.ts",
+                //     "meta.decorator.ts meta.objectliteral.ts meta.object.member.ts meta.array.literal.ts meta.objectliteral.ts meta.object.member.ts meta.array.literal.ts meta.objectliteral.ts meta.object.member.ts meta.function.expression.ts meta.block.ts keyword.control.flow.ts",
+                //     "meta.decorator.ts meta.objectliteral.ts meta.object.member.ts meta.array.literal.ts meta.objectliteral.ts meta.object.member.ts meta.array.literal.ts meta.objectliteral.ts meta.object.member.ts meta.function.expression.ts meta.block.ts meta.brace.round.ts",
+                //     "meta.decorator.ts meta.objectliteral.ts meta.object.member.ts meta.array.literal.ts meta.objectliteral.ts meta.object.member.ts meta.array.literal.ts meta.objectliteral.ts meta.object.member.ts meta.function.expression.ts meta.block.ts punctuation.accessor.ts",
+                //     "meta.decorator.ts meta.objectliteral.ts meta.object.member.ts meta.array.literal.ts meta.objectliteral.ts meta.object.member.ts meta.array.literal.ts meta.objectliteral.ts meta.object.member.ts meta.function.expression.ts meta.block.ts punctuation.terminator.statement.ts",
+                // ],
+                // "settings": {
+                //     "foreground": "#506477dd",
+                //     "fontStyle": "bold"
+                // }
+            },
+            {
+                "name": "field-decorators",
+                "scope": [
+                    // field decorator
+                    "meta.class.ts meta.decorator.ts meta.function-call.ts entity.name.function.ts",
+                    // decorator @
+                    "meta.decorator.ts punctuation.decorator.ts",
+                    // decorator ()
+                    "meta.decorator.ts meta.brace.round.ts",
+                    // comma
+                    "meta.class.ts meta.decorator.ts punctuation.separator.comma.ts",
+                    // arrow function in field decorator
+                    "meta.class.ts meta.decorator.ts meta.arrow.ts meta.parameters.ts punctuation.definition.parameters.begin.ts",
+                    "meta.class.ts meta.decorator.ts meta.arrow.ts meta.parameters.ts punctuation.definition.parameters.end.ts",
+                    "meta.class.ts meta.decorator.ts meta.arrow.ts storage.type.function.arrow.ts",
+                    "meta.class.ts meta.decorator.ts variable.other.readwrite.ts",
+                    "meta.class.ts meta.decorator.ts meta.arrow.ts meta.array.literal.ts meta.brace.square.ts",
+                    "meta.class.ts meta.decorator.ts meta.objectliteral.ts meta.object.member.ts constant.language.boolean.true.ts",
+                    "meta.class.ts meta.decorator.ts meta.objectliteral.ts meta.object.member.ts constant.language.boolean.false.ts",
+                    "meta.class.ts meta.decorator.ts meta.arrow.ts meta.parameters.ts variable.parameter.ts",
+                    // string
+                    "meta.class.ts meta.decorator.ts string.quoted.single.ts punctuation.definition.string.begin.ts",
+                    "meta.class.ts meta.decorator.ts string.quoted.single.ts punctuation.definition.string.end.ts",
+                    "meta.class.ts meta.decorator.ts string.quoted.single.ts",
+                    // number
+                    "meta.class.ts meta.decorator.ts constant.numeric.decimal.ts",
+                    // boolean
+                    "meta.class.ts meta.decorator.ts constant.language.boolean.true.ts",
+                    "meta.class.ts meta.decorator.ts constant.language.boolean.false.ts",
+                    // object
+                    "meta.class.ts meta.decorator.ts meta.objectliteral.ts punctuation.definition.block.ts",
+                    "meta.class.ts meta.decorator.ts meta.objectliteral.ts meta.object.member.ts meta.object-literal.key.ts",
+                    "meta.class.ts meta.decorator.ts meta.objectliteral.ts meta.object.member.ts meta.object-literal.key.ts punctuation.separator.key-value.ts",
+                    "meta.class.ts meta.decorator.ts meta.objectliteral.ts punctuation.separator.comma.ts",
+                    "meta.class.ts meta.decorator.ts meta.objectliteral.ts meta.object.member.ts constant.numeric.decimal.ts",
+                    "meta.class.ts meta.decorator.ts meta.objectliteral.ts meta.object.member.ts string.quoted.single.ts punctuation.definition.string.begin.ts",
+                    "meta.class.ts meta.decorator.ts meta.objectliteral.ts meta.object.member.ts string.quoted.single.ts punctuation.definition.string.end.ts",
+                    "meta.class.ts meta.decorator.ts meta.objectliteral.ts meta.object.member.ts string.quoted.single.ts",
+                    "meta.class.ts meta.decorator.ts meta.objectliteral.ts meta.object.member.ts meta.object-literal.key.ts entity.name.function.ts",
+                    "meta.class.ts meta.decorator.ts meta.objectliteral.ts meta.object.member.ts meta.arrow.ts meta.parameters.ts variable.parameter.ts",
+                    // arithmetics
+                    "meta.class.ts meta.decorator.ts keyword.operator.arithmetic.ts",
+                    "meta.class.ts meta.decorator.ts keyword.operator.increment.ts",
+                ],
+                "settings": {
+                    "foreground": "#506477dd",
+                    "fontStyle": "bold"
+                }
+            }
+          ]
+        }
+    },
+}
