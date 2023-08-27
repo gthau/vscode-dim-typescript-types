@@ -49,6 +49,15 @@
                     "meta.class.ts meta.method.declaration.ts meta.parameters.ts meta.type.annotation.ts meta.object.type.ts punctuation.definition.block.ts",
                     "meta.class.ts meta.method.declaration.ts meta.parameters.ts meta.type.annotation.ts meta.object.type.ts meta.field.declaration.ts meta.definition.property.ts variable.object.property.ts",
                     "meta.class.ts meta.method.declaration.ts meta.parameters.ts meta.type.annotation.ts meta.object.type.ts meta.field.declaration.ts keyword.operator.optional.ts",
+                    // object in generic return type
+                    "meta.class.ts meta.method.declaration.ts meta.return.type.ts meta.type.parameters.ts meta.object.type.ts punctuation.definition.block.ts",
+                    "meta.class.ts meta.method.declaration.ts meta.return.type.ts meta.type.parameters.ts meta.object.type.ts meta.field.declaration.ts meta.definition.property.ts entity.name.function.ts",
+                    "meta.class.ts meta.method.declaration.ts meta.return.type.ts meta.type.parameters.ts meta.object.type.ts meta.field.declaration.ts meta.type.annotation.ts meta.type.function.ts meta.parameters.ts variable.parameter.ts",
+                    // object in return type
+                    "meta.class.ts meta.method.declaration.ts meta.return.type.ts meta.object.type.ts punctuation.definition.block.ts",
+                    "meta.class.ts meta.method.declaration.ts meta.return.type.ts meta.object.type.ts meta.field.declaration.ts meta.definition.property.ts variable.object.property.ts",
+                    "meta.class.ts meta.method.declaration.ts meta.return.type.ts meta.object.type.ts meta.field.declaration.ts meta.definition.property.ts entity.name.function.ts",
+                    "meta.class.ts meta.method.declaration.ts meta.return.type.ts meta.object.type.ts meta.field.declaration.ts meta.type.annotation.ts meta.type.function.ts meta.parameters.ts variable.parameter.ts",
                     // comma in generics
                     "meta.type.parameters.ts punctuation.separator.comma.ts",
                     // type in parametrized type
